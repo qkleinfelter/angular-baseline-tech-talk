@@ -13,5 +13,7 @@ export class AppComponent {
   links = [
     { title: 'Home', link: '/' },
     { title: 'Conditional Rendering', link: '/conditional-rendering' },
+    { title: 'Pipes', link: '/pipes' },
+    { title: 'Component Communication', link: '/communication' },
   ];
 }

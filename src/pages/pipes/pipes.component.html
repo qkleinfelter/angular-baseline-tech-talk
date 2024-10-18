@@ -1,0 +1,18 @@
+<h1>No pipe</h1>
+<div>{{ now }}</div>
+
+<h1>With date pipe & several different options</h1>
+<div>{{ now | date:'short' }}</div>
+<div>{{ now | date:'medium' }}</div>
+<div>{{ now | date:'long' }}</div>
+<div>{{ now | date:'full' }}</div>
+<div>{{ now | date:'shortDate' }}</div>
+<div>{{ now | date:'shortTime' }}</div>
+
+<br>
+
+<h1>No Pipe</h1>
+<div>{{ name }}</div>
+
+<h1>With Robertson pipe</h1>
+<div>{{ name | appRobertson }}</div>
