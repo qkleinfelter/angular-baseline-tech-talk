@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, output, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -12,4 +12,14 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class ChildComponent {
   @Input() name: string = ''; // Default value is empty string
+  @Output() oldOutput = new EventEmitter<string>();
+  newOutput = output<string>();
+
+  sendOldOutput() {
+    this.oldOutput.emit("The old stuff")
+  }
+
+  sendNewOutput() {
+    this.newOutput.emit("The new stuff")
+  }
 }
