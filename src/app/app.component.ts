@@ -15,5 +15,6 @@ export class AppComponent {
     { title: 'Conditional Rendering', link: '/conditional-rendering' },
     { title: 'Pipes', link: '/pipes' },
     { title: 'Component Communication', link: '/communication' },
+    { title: 'Routing', link: '/route-data/quinn.kleinfelter' },
   ];
 }
