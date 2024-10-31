@@ -4,5 +4,10 @@
   [name]="childInput"
   (oldOutput)="handleOldOutput($event)"
   (newOutput)="handleNewOutput($event)"
+  [(something)]="somethingOnParent"
   #child
 ></app-child>
+<br><br>
+
+<input type="text" [(ngModel)]="fieldValue">
+<section>The field value is: {{ fieldValue }}</section>

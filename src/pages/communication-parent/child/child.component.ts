@@ -15,6 +15,10 @@ export class ChildComponent {
   @Output() oldOutput = new EventEmitter<string>();
   newOutput = output<string>();
 
+  // Two way Binding
+  @Input() something = null;
+  @Output() somethingChange = new EventEmitter<any>();
+
   sendOldOutput() {
     this.oldOutput.emit("The old stuff")
   }

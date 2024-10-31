@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { ChildComponent } from './child/child.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-communication-parent',
   standalone: true,
   imports: [
     CommonModule,
-    ChildComponent
+    ChildComponent,
+    FormsModule
   ],
   templateUrl: './communication-parent.component.html',
   styleUrl: './communication-parent.component.scss',
@@ -15,6 +17,8 @@ import { ChildComponent } from './child/child.component';
 export class CommunicationParentComponent implements AfterViewInit {
   childInput = 'Some Typescript Value'
   @ViewChild(ChildComponent) childComponent!: ChildComponent;
+  fieldValue: string = '';
+  somethingOnParent = null;
 
   ngAfterViewInit(): void {
     this.subscribeToChildOutput();
