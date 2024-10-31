@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { ChildComponent } from './child/child.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-communication-parent',
@@ -19,9 +20,16 @@ export class CommunicationParentComponent implements AfterViewInit {
   @ViewChild(ChildComponent) childComponent!: ChildComponent;
   fieldValue: string = '';
   somethingOnParent = null;
+  dogUrl = '';
+
+  constructor(private apiService: ApiService) {}
 
   ngAfterViewInit(): void {
     this.subscribeToChildOutput();
+    this.apiService.getDog().subscribe(data => {
+      console.log(data)
+      this.dogUrl = data.message;
+    });
   }
 
   handleOldOutput($event: string) {
