@@ -2,6 +2,7 @@
 
 <app-child
   [name]="childInput"
+  [nameSignal]="childInput"
   (oldOutput)="handleOldOutput($event)"
   (newOutput)="handleNewOutput($event)"
   [(something)]="somethingOnParent"

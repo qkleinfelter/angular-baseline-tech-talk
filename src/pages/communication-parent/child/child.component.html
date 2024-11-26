@@ -1,3 +1,4 @@
 <div>Hello {{ name ? name : 'N/A' }}!</div>
+<div>Name Signal: {{ nameSignal() ? nameSignal() : 'N/A' }}</div>
 <button (click)="sendOldOutput()">Send old output</button>
 <button (click)="sendNewOutput()">Send new output</button>

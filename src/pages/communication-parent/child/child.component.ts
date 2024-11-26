@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, output, Output } from '@angular/core';
+import { Component, EventEmitter, input, Input, output, Output } from '@angular/core';
 
 @Component({
     selector: 'app-child',
@@ -11,6 +11,7 @@ import { Component, EventEmitter, Input, output, Output } from '@angular/core';
 })
 export class ChildComponent {
   @Input() name: string = ''; // Default value is empty string
+  readonly nameSignal = input<string>('');
   @Output() oldOutput = new EventEmitter<string>();
   newOutput = output<string>();
 
