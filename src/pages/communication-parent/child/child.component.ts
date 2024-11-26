@@ -18,6 +18,8 @@ export class ChildComponent {
   // Two way Binding
   @Input() something = null;
   @Output() somethingChange = new EventEmitter<any>();
+  something2 = input<number>();
+  something2Change = output<number>();
 
   sendOldOutput() {
     this.oldOutput.emit("The old stuff")

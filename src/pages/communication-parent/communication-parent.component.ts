@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, model, ViewChild } from '@angular/core';
 import { ChildComponent } from './child/child.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
@@ -18,8 +18,11 @@ export class CommunicationParentComponent implements AfterViewInit {
   childInput = 'Some Typescript Value'
   @ViewChild(ChildComponent) childComponent!: ChildComponent;
   fieldValue: string = '';
-  somethingOnParent = null;
   dogUrl = '';
+
+  // Two way binding
+  somethingOnParent = null;
+  something2OnParent = model(0);
 
   constructor(private apiService: ApiService) {}
 
