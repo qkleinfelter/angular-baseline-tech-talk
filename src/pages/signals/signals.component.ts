@@ -1,11 +1,10 @@
 import { AfterViewInit, Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
 
 @Component({
-  selector: 'app-signals',
-  standalone: true,
-  imports: [],
-  templateUrl: './signals.component.html',
-  styleUrl: './signals.component.scss'
+    selector: 'app-signals',
+    imports: [],
+    templateUrl: './signals.component.html',
+    styleUrl: './signals.component.scss'
 })
 export class SignalsComponent implements AfterViewInit {
   count: WritableSignal<number> = signal(0);

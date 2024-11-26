@@ -3,14 +3,13 @@ import {  Component } from '@angular/core';
 import { RobertsonPipe } from '../../pipes/robertson.pipe';
 
 @Component({
-  selector: 'app-pipes',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RobertsonPipe
-  ],
-  templateUrl: './pipes.component.html',
-  styleUrl: './pipes.component.scss',
+    selector: 'app-pipes',
+    imports: [
+        CommonModule,
+        RobertsonPipe
+    ],
+    templateUrl: './pipes.component.html',
+    styleUrl: './pipes.component.scss'
 })
 export class PipesComponent {
   now = new Date();

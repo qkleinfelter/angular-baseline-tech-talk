@@ -5,15 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
 
 @Component({
-  selector: 'app-communication-parent',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ChildComponent,
-    FormsModule
-  ],
-  templateUrl: './communication-parent.component.html',
-  styleUrl: './communication-parent.component.scss',
+    selector: 'app-communication-parent',
+    imports: [
+        CommonModule,
+        ChildComponent,
+        FormsModule
+    ],
+    templateUrl: './communication-parent.component.html',
+    styleUrl: './communication-parent.component.scss'
 })
 export class CommunicationParentComponent implements AfterViewInit {
   childInput = 'Some Typescript Value'
