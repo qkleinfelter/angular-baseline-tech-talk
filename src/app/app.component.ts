@@ -15,6 +15,7 @@ export class AppComponent {
     { title: 'Pipes', link: '/pipes' },
     { title: 'Component Communication', link: '/communication' },
     { title: 'Routing', link: '/route-data/quinn.kleinfelter' },
-    { title: 'Signals', link: '/signals' }
+    { title: 'Signals', link: '/signals' },
+    { title: 'RxJS', link: '/rxjs' },
   ];
 }
