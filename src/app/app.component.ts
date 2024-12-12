@@ -17,5 +17,6 @@ export class AppComponent {
     { title: 'Routing', link: '/route-data/quinn.kleinfelter' },
     { title: 'Signals', link: '/signals' },
     { title: 'RxJS', link: '/rxjs' },
+    { title: 'Reactive Forms', link: '/reactive-forms' },
   ];
 }
